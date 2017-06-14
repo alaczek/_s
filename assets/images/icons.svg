@@ -1,0 +1,12 @@
+<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-expand" viewBox="0 0 32 32">
+<title>expand</title>
+<path d="M16 25.4l-13.4-13.4 2.8-2.8 10.6 10.6 10.6-10.6 2.8 2.8z"></path>
+</symbol>
+<symbol id="icon-menu" viewBox="0 0 32 32">
+<title>menu</title>
+<path d="M0 28h32v-4h-32v4zM0 4v4h32v-4h-32zM0 18h32v-4h-32v4z"></path>
+</symbol>
+</defs>
+</svg>
