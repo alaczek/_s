@@ -17,7 +17,10 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', get_post_format() );
 
-			the_post_navigation();
+			the_post_navigation( array(
+				'next_text' => wp_kses( __( '<span class="meta-nav">Next</span> %title', '_s' ), array( 'span' => array( 'class' => array() ) ) ),
+				'prev_text' => wp_kses( __( '<span class="meta-nav">Previous</span> %title', '_s' ), array( 'span' => array( 'class' => array() ) ) )
+			) );
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
