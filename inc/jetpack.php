@@ -71,3 +71,14 @@ function _s_has_post_thumbnail( $post = null ) {
 		return has_post_thumbnail( $post );
 	}
 }
+
+/**
+ * Return early if Author Bio is not available.
+ */
+function _s_author_bio() {
+	if ( ! function_exists( 'jetpack_author_bio' ) ) {
+		get_template_part( 'content', 'author' );
+	} else {
+		jetpack_author_bio();
+	}
+}

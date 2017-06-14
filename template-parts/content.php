@@ -54,6 +54,8 @@
 		?>
 	</div><!-- .entry-content -->
 
+	<?php _s_author_bio(); ?>
+
 	<footer class="entry-footer">
 		<?php _s_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
