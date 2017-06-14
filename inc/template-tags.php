@@ -24,11 +24,15 @@ function _s_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	$posted_on = sprintf(
-		/* translators: %s: post date. */
-		esc_html_x( 'Posted on %s', 'post date', '_s' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-	);
+	if ( is_sticky() && ! is_single() && ! is_archive() ) {
+			$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . esc_html__( 'Featured', '_s' ) . '</a>';
+		} else {
+			$posted_on = sprintf(
+				/* translators: %s: post date. */
+				esc_html_x( 'Posted on %s', 'post date', '_s' ),
+				'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+			);
+		}
 
 	$byline = sprintf(
 		/* translators: %s: post author. */
