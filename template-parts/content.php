@@ -10,13 +10,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php if ( _s_has_post_thumbnail() ) : ?>
-			<div class="entry-thumbnail">
-				<?php the_post_thumbnail( '_s-featured' ); ?>
-			</div>
-		<?php endif; ?>
+	<?php if ( _s_has_post_thumbnail() ) : ?>
+		<div class="entry-thumbnail">
+			<?php the_post_thumbnail( '_s-featured' ); ?>
+		</div>
+	<?php endif; ?>
 
+	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
